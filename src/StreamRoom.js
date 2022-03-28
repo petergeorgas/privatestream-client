@@ -5,6 +5,7 @@ function StreamRoom() {
 
 const streamVideo = useRef();
 
+    // We need to get the screen capture.
     useEffect(() => {
         navigator.mediaDevices.getDisplayMedia({video: true}).then(stream => {
             streamVideo.current.srcObject = stream;
